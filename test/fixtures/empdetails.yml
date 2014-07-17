@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  empid: 1
+  empname: MyText
+  expertise: 1
+  expinmonths: 1
+  edudetails: MyText
+  mobileno: MyString
+  string: MyString
+  address: MyText
+  gender: MyText
+  doj: 2014-07-17
+  travelabroad: false
+
+two:
+  empid: 1
+  empname: MyText
+  expertise: 1
+  expinmonths: 1
+  edudetails: MyText
+  mobileno: MyString
+  string: MyString
+  address: MyText
+  gender: MyText
+  doj: 2014-07-17
+  travelabroad: false
