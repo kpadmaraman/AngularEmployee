@@ -14,7 +14,7 @@ ol, ul {
 }
 
 h1, h2, h3, h4, h5, h6, li {
-	line-height:100%;
+	line-height:20%;
 }
 
 blockquote, q {
@@ -105,7 +105,14 @@ h6 {
 	th {padding:3px; font-weight:bold;color:#344b3b;}
 	tr {margin:0 0 5px 0;padding:3px;}
 	td {padding:5px;margin:0 1px;}
-	
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}	
+td {align:center;}
 	/*  horizontal lines
 	******************************/
 	hr {border-bottom: 1px solid #C1C1CB;margin:5px 0;padding:0;height:2px;width:100%; margin-bottom:15px;}
@@ -140,8 +147,8 @@ h6 {
 }
 
 #header .top_banner{
-	background:url(../images/header.jpg) no-repeat left top;
-	height:175px;
+	background:url('/assets/hrms.jpg') no-repeat left top;
+	height:25px;
 	padding:75px 95px 0 295px;
 	border:#496066 solid 1px;
 }
@@ -216,6 +223,36 @@ h6 {
 #page_content .right_section{
 	float:right;
 }
+
+#page_content .left_section{
+	float:left;
+}
+.left_section ul li{
+	margin:0px;
+	padding:0px 10px;
+	display:inline;
+	font-size:15px;
+	list-style-type:none;
+	border-right:#868B8F dotted 2px;
+}
+
+#empdetail-list-container{
+	margin:0px;
+	padding:0px 10px;
+	display:inline;
+	font-size:15px;
+	list-style-type:none;
+	border-right:#868B8F dotted 2px;
+}
+
+#empdetail-view-container{
+  border-left: 1px solid #d0d0d0;
+  top: 37px;
+  left: 300px;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  }
 
 #page_content .right_section .top_content{
 	padding:15px 0 0px 0;

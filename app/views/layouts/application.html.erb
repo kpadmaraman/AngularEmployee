@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html ng-app="AngularEmpdetails">
-<head>
-  <title>Angular Employee Details</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular Employee Details</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+    <meta name="description" content="A description of your website">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <link href="/assets/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+      <header>
+      Angular 
+      </header>
+<div id="wrapper"> 
 
-<%= yield %>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"></script>
-  <%= javascript_include_tag "application" %>
+  <div id="header"> 
 
-</body>
+    <div class="top_banner">
+    </div>
+ 
+  </div>
+
+  <div id="page_content">
+
+    <div class="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Create Employee</a></li>
+      </ul>
+    </div>
+
+
+      <%= yield %>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"></script>
+      <%= javascript_include_tag "application" %>
+
+    <div class="clear"></div>
+    
+    <!--start footer from here-->
+    <div id="footer">Copyright &copy; 2014. Design by <a href="http://www.websitetemplates.org.in" target="_blank">SEDIN Tech</a><br>
+    
+    <!--DO NOT remove footer link-->
+    <!--Template designed by--><a href="http://www.websitetemplates.org.in"><img src="/assets/copyright.gif" class="copyright" alt="http://www.websitetemplates.org.in"></a></div>
+	
+    <!--/. end footer from here-->
+  </div>
+
+</div>
+
+  </body>
 </html>
+

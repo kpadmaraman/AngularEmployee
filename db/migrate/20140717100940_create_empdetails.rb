@@ -3,7 +3,7 @@ class CreateEmpdetails < ActiveRecord::Migration
     create_table :empdetails do |t|
       t.integer :empid
       t.text :empname
-      t.integer :expertise
+      t.string :expertise
       t.integer :expinmonths
       t.text :edudetails
       t.string :mobileno

@@ -13,10 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20140717100940) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "empdetails", force: true do |t|
     t.integer  "empid"
     t.text     "empname"
-    t.integer  "expertise"
+    t.string   "expertise"
     t.integer  "expinmonths"
     t.text     "edudetails"
     t.string   "mobileno"

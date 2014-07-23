@@ -1,9 +1,9 @@
-Rails.application.routes.draw do
-  get 'emphome/index'
-
+Employee::Application.routes.draw do
   scope :api do
-    get "/empdetails(.:format)" => "empdetails#index"
-    get "/empdetails/:id(.:format)" => "empdetails#show"
+    #~ get "/empdetails(.:format)" => "empdetails#index"
+    #~ get "/empdetails/:id(.:format)" => "empdetails#show"
+    #~ post "/empdetails(.:format)" => "empdetails#create"
+    resources :empdetails, defaults: {format: :json}
   end
    root to: "emphome#index"
   # The priority is based upon order of creation: first created -> highest priority.

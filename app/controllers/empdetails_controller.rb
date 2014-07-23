@@ -1,13 +1,23 @@
 class EmpdetailsController < ApplicationController
-  # GET /screencasts
-  # GET /screencasts.json
+    respond_to :json
   def index
-    render json: Empdetail.all
+        respond_with Empdetail.all
   end
 
-  # GET /screencasts/:id
-  # GET /screencasts/:id.json
   def show
-    render json: Empdetail.find(params[:id])
+    respond_with Empdetail.find(params[:id])
   end
+  def create
+    #~ p Empdetail.create(emp_params)
+    respond_with Empdetail.create(emp_params)
+  end
+
+  def destroy
+   respond_with Empdetail.destroy(params[:id])
+  end
+
+  private
+    def emp_params
+      params.require(:empdetail).permit(:empid, :empname, :expertise, :expinmonths, :edudetails, :mobileno, :address,  :gender, :doj, :travelabroad)
+    end
 end

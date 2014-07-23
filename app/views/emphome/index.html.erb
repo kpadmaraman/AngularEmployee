@@ -1,11 +1,56 @@
-<div>
-  <label>Name:</label>
-  <input type="text" ng-model="yourName" placeholder="Enter a name here">
-  <hr>
-  <h1>Hello {{yourName}}!</h1>
+      <div class="common_content">
+        <h2>Employee List</h2>
+        <hr>
 
-</div>
+          <div ng-controller="EmpdetailsCtrl">
+           <div id="empdetail-list-container">
+              <form ng-submit="createEmpdetail()">
+                <input type="text" ng-model='newempid' placeholder="Enter an EmployeeID">
+                <input type="text" ng-model='newempname' placeholder="Enter an Employee Name">
+                <input type="text" ng-model='newexpertise' placeholder="Enter newexpertise ">
+                <input type="text" ng-model='newexpinmonths' placeholder="Enter an newexpinmonths">
+                <input type="text" ng-model='newedudetails' placeholder="Enter an newedudetails">
+                <input type="text" ng-model='newmobileno' placeholder="Enter an newmobileno">
+                <input type="text" ng-model='newaddress' placeholder="Enter an newaddress">
+                <input type="text" ng-model='newgender' placeholder="Enter an newgender">
+                <input type="text" ng-model='newdoj' placeholder="Enter an newdoj">
+                <input type="text" ng-model='newtravelabroad' placeholder="newtravelabroad">
+                <input type="submit" value="Add">
+              </form>
+      <br></br>
 
-<div ng-controller="EmpdetailsCtrl">
-	<h1>Message: {{message}}</h1>
-</div>
+					<label for="Filter">Filter</label>
+            <input type="text" ng-model="search1">
+            Sort by:
+                  <select ng-model="orderProp">
+                    <option value="empid">Employee ID</option>
+                    <option value="empname">Employee Name</option>
+                    <option value="doj">DOJ</option>
+                  </select>
+                <table>
+                  <tr>
+                <th>EmpID</th>
+                <th>EmpName</th>
+                <th>Expertise</th>
+                <th>Education</th>
+                <th>Gender</th>
+                <th>MobileNo</th>
+                <th>DOJ</th>
+                </tr>
+                <tr ng-animate="'animate'" ng-repeat="empdetail in empdetails | filter:search1 | orderBy:orderProp">
+                  <td>{{empdetail.empid}}</td>
+                  <td>{{empdetail.empname}}</td> 
+                  <td>{{empdetail.expertise}}</td> 
+                  <td>{{empdetail.edudetails}}</td> 
+                  <td>{{empdetail.gender}}</td> 
+                  <td>{{empdetail.mobileno}}</td> 
+                  <td>{{empdetail.doj}}</td>         
+									<td><a href='' ng-click="deleteEmpdetail(empdetail.id,$index)">Delete</a></td>									
+                  </tr>
+                  </h3> <br>
+                </table>
+            </div>
+            
+          </div>
+      
+    </div>
